@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Support | KB Manager for Zoho Desk</title><link rel="stylesheet" href="style.css"></head><body><header><strong>KB Manager for Zoho Desk</strong><nav aria-label="Main"><a href="index.html">Overview</a><a href="guide.html">Guide</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></header><main><h1>Support and user guide</h1>
+<p>KB Manager is in pre-release. The extension has not yet been submitted to Zoho Marketplace. The documented flow requires a real installation and the necessary Desk permissions.</p>
+<ol>
+<li>Install the tested extension into the intended Zoho Desk organization and authorize only the article scopes required by its final manifest.</li>
+<li>Open KB Manager from the Desk top band; if absent, inspect the overflow menu. Load only the article scope you intend to maintain.</li>
+<li>Inspect link results. Confirmed HTTP failures and checks blocked by authentication or a network restriction need different follow-up; an inconclusive result is not proof the URL is broken.</li>
+<li>For repeated text or URL edits, enter the search and replacement values, create a preview, and review each affected article. Apply only the intended changes. A later edit invalidates a stale preview; generate a fresh one.</li>
+<li>Review per-article apply outcomes. Use Undo only for eligible successful changes while their recovery record remains available. If another editor changed an article, review it manually instead of overwriting the newer content.</li>
+<li>Choose an age threshold for the article review report. Export CSV as needed. CSV is a report, not a full knowledge-base backup.</li>
+</ol>
+<h2>Troubleshooting</h2>
+<ul>
+<li>Missing article permission: ask the Desk administrator to verify your article role and the extension connection scopes.</li>
+<li>OAuth scope mismatch: reauthorize the actual KB Manager connection after its scope list has been corrected. The predecessor ticket extension's authorization is insufficient for article operations.</li>
+<li>Link check blocked: test the URL through your normal authorized workflow. Do not bypass login, Cloudflare, or a paywall.</li>
+<li>Partial run: review successful and failed rows and refresh source content before a new preview. Do not reapply a completed run blindly.</li>
+<li>Rate limit or quota response: stop, preserve the exact error and any reset time, then resume only when the limit permits it.</li>
+</ul>
+<p>Support and privacy contact: support@atesensoftware.com. There is no guaranteed response-time SLA. Provide the extension version, data center, timestamp/time zone, action, redacted error, and article IDs only when necessary. Never send access tokens, OAuth secrets, full customer exports, or personal contact information.</p>
+<h2>Uninstall and recovery</h2>
+<p>The organization-specific recovery journal persists in browser localStorage with no automatic expiry. Keep the same browser profile and extension origin when recovering a run. Use the journal deletion control only after reviewing the run and confirming recovery is no longer needed; otherwise clear the extension origin's browser/site data. Deleting that record removes this extension's undo capability. Exported CSV reports are not a content backup. Uninstalling does not guarantee browser-storage cleanup and does not delete downloaded files.</p></main><footer>Atesen Software - Product documentation - Updated 22 October 2026<br>Independent Zoho Desk extension. Marketplace submission and real-org verification are pending.</footer></body></html>

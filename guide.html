@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Guide | KB Manager for Zoho Desk</title><link rel="stylesheet" href="style.css"></head><body><header><strong>KB Manager for Zoho Desk</strong><nav aria-label="Main"><a href="index.html">Overview</a><a href="guide.html">Guide</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></header><main><h1>Workflow guide</h1>
+<p>This pre-release guide describes the extension workflow. Live installation in the EU trial organization remains pending account access.</p>
+<h2>1. Load and inspect</h2>
+<p>Open KB Manager in the Desk top band and load accessible articles. Choose the intended scope. Source article permissions continue to apply.</p>
+<h2>2. Review links</h2>
+<p>Inspect article links. External HTTP checking is opt-in and sends requests from your browser. HTTP 404/410 indicates a broken destination; authentication restrictions, CORS failures, and other inconclusive results need follow-up. A quota or rate-limit response stops further checking. The scan is not a scheduled background service.</p>
+<h2>3. Preview replacements</h2>
+<p>Enter the text to find and its replacement, create a preview, and check each changed article. The source content and modification time are checked again before a write. If the source changed, refresh and create another preview. Do not assume a multi-article run is atomic.</p>
+<h2>4. Apply and inspect results</h2>
+<p>Apply only the intended changes. Review successful, failed, uncertain and conflicting results. Preserve the recovery journal while you need undo. A failed or interrupted call can require manual review of the article before retrying.</p>
+<h2>5. Undo eligible changes</h2>
+<p>Use the recovery action in the same browser profile and organization. The extension checks the article's content and available modification-time guard before restoring original content. A later edit blocks automatic restoration. Recovery data persists in localStorage until removed; journal deletion permanently removes this extension's recovery record.</p>
+<h2>6. Review article age and export</h2>
+<p>Set an article age threshold and inspect the resulting maintenance queue. Export CSV when needed. Protect downloaded reports and delete them according to your organization's policy. They are not full content backups.</p></main><footer>Atesen Software - Product documentation - Updated 22 October 2026<br>Independent Zoho Desk extension. Marketplace submission and real-org verification are pending.</footer></body></html>
